@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-image: url('https://images.unsplash.com/photo-1529074963764-98f45c47344b?q=80&w=1786&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 1000px;
+  width: 600px;
+  max-height: 90vh; /* Limit height to prevent overflow */
+  overflow-y: auto; /* Enable vertical scrolling within the App container */
+  text-align: center;
+  border-top: 6px solid #007bff;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #007bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1::before {
+  content: '✈️';
+  margin-right: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  width: 70%;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  padding: 12px 20px;
+  margin-left: 10px;
+  border: none;
+  background-color: #07a51f;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #09db3e;
+}
+
+button:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the start to prevent button from moving */
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+  position: relative; /* Add relative positioning */
+}
+
+li:hover {
+  background-color: #f1f1f1;
+}
+
+li input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+li input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+li .text-container {
+  flex-grow: 0; /* Ensure the text container takes up available space */
+  margin-right: 10px; /* Add some space between text and buttons */
+  overflow: hidden;
+  word-wrap: break-word; /* Ensure text wraps within the container */
+}
+
+li .button-container {
+  display: flex;
+  flex-shrink: 0; /* Prevent shrinking of button container */
+  position: sticky; /* Make the button container sticky */
+  right: 0; /* Stick to the right side of the list item */
+  top: 0; /* Stick to the top of the list item */
+  background-color: #f9f9f9; /* Match the background color */
+  padding: 2px;
+  border-radius: 8px;
+}
+
+li button.edit-btn {
+  background-color: #1e8ee3;
+  width: 86.25px;
+  height: 42.4px;
+}
+
+li button.edit-btn:hover {
+  background-color: #5ab0f5;
+}
+
+li button.delete-btn {
+  background-color: #dc3545;
+}
+
+li button.delete-btn:hover {
+  background-color: #f10a21;
+}
+
+li button.update-btn {
+  background-color: #e99608;
+}
+
+li button.update-btn:hover {
+  background-color: #f5b30b;
+}
+
